@@ -1,7 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE web-app PUBLIC
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+
+  <!--<servlet>-->
+    <!--<servlet-name>freemarker</servlet-name>-->
+    <!--<servlet-class>freemarker.ext.servlet.FreemarkerServlet</servlet-class>-->
+
+    <!--&lt;!&ndash; FreemarkerServlet settings: &ndash;&gt;-->
+    <!--<init-param>-->
+      <!--<param-name>TemplatePath</param-name>-->
+      <!--<param-value>/</param-value>-->
+    <!--</init-param>-->
+    <!--<init-param>-->
+      <!--<param-name>NoCache</param-name>-->
+      <!--<param-value>true</param-value>-->
+    <!--</init-param>-->
+    <!--<init-param>-->
+      <!--<param-name>ContentType</param-name>-->
+      <!--<param-value>text/html; charset=UTF-8</param-value> &lt;!&ndash; Forces UTF-8 output encoding! &ndash;&gt;-->
+    <!--</init-param>-->
+
+    <!--&lt;!&ndash; FreeMarker settings: &ndash;&gt;-->
+    <!--<init-param>-->
+      <!--<param-name>incompatible_improvements</param-name>-->
+      <!--<param-value>2.3.22</param-value>-->
+      <!--&lt;!&ndash; Recommended to set to a high value. For the details, see the Java API docs of-->
+           <!--freemarker.template.Configuration#Configuration(Version). &ndash;&gt;-->
+    <!--</init-param>-->
+    <!--<init-param>-->
+      <!--<param-name>template_exception_handler</param-name>-->
+      <!--&lt;!&ndash; Use "html_debug" instead during development! &ndash;&gt;-->
+      <!--<param-value>rethrow</param-value>-->
+    <!--</init-param>-->
+    <!--<init-param>-->
+      <!--<param-name>template_update_delay</param-name>-->
+      <!--&lt;!&ndash; ATTENTION, 0 is for development only! Use higher value otherwise. &ndash;&gt;-->
+      <!--<param-value>0</param-value>-->
+    <!--</init-param>-->
+    <!--<init-param>-->
+      <!--<param-name>default_encoding</param-name>-->
+      <!--&lt;!&ndash; The encoding of the template files. &ndash;&gt;-->
+      <!--<param-value>UTF-8</param-value>-->
+    <!--</init-param>-->
+    <!--<init-param>-->
+      <!--<param-name>locale</param-name>-->
+      <!--&lt;!&ndash; Influences number and date/time formatting, etc. &ndash;&gt;-->
+      <!--<param-value>en_US</param-value>-->
+    <!--</init-param>-->
+    <!--<init-param>-->
+      <!--<param-name>number_format</param-name>-->
+      <!--<param-value>0.##########</param-value>-->
+    <!--</init-param>-->
+
+    <!--<load-on-startup>1</load-on-startup>-->
+  <!--</servlet>-->
+
+  <!--<servlet-mapping>-->
+    <!--<servlet-name>freemarker</servlet-name>-->
+    <!--<url-pattern>*.ftl</url-pattern>-->
+  <!--</servlet-mapping>-->
+
+  <!--&lt;!&ndash;-->
+    <!--Prevent the visiting of MVC Views from outside the servlet container.-->
+    <!--RequestDispatcher.forward/include should, and will still work.-->
+    <!--Removing this may open security holes!-->
+  <!--&ndash;&gt;-->
+  <!--<security-constraint>-->
+    <!--<web-resource-collection>-->
+      <!--<web-resource-name>FreeMarker MVC Views</web-resource-name>-->
+      <!--<url-pattern>*.ftl</url-pattern>-->
+    <!--</web-resource-collection>-->
+    <!--<auth-constraint>-->
+      <!--&lt;!&ndash; Nobody is allowed to visit these directly. &ndash;&gt;-->
+    <!--</auth-constraint>-->
+  <!--</security-constraint>-->
+
 </web-app>
