@@ -3,7 +3,7 @@
     <title>FreeMarker整合SpringBoot</title>
 </head>
 <body>
-    hello, ${name} !!!!!!
+    <h1>hello, ${name} !!!!!!</h1>
 </body>
 
 </html>

@@ -1,10 +1,7 @@
 package cn.jamesxia.java.freemarker_study.controller;
 
 import cn.jamesxia.java.freemarker_study.model.CompMethod;
-import freemarker.template.Configuration;
-import freemarker.template.Template;
-import freemarker.template.TemplateException;
-import freemarker.template.TemplateExceptionHandler;
+import freemarker.template.*;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,7 +26,12 @@ public class IndexController {
 //            System.out.println(this.getClass().getResource("/templates").getPath());
             cfg.setDirectoryForTemplateLoading(new File(this.getClass().getResource("/templates").getPath()));
 
+            //共享变量
+            cfg.setSharedVariable("company", "招银网络科技");
+
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (TemplateModelException e) {
             e.printStackTrace();
         }
 
@@ -38,6 +40,8 @@ public class IndexController {
 
         //2.3 设置错误处理方法
         cfg.setTemplateExceptionHandler(TemplateExceptionHandler.HTML_DEBUG_HANDLER);
+
+
 
     }
 

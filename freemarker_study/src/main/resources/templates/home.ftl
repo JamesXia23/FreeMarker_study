@@ -6,6 +6,7 @@
     <h1>hello, ${user}</h1>
     <p>点点看：</p>
     <a href="${latestProduct.url}">${latestProduct.name}</a>
+    公司：${company}
 </body>
 
 </html>
