@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -38,5 +40,14 @@ public class HelloController {
         model.addAttribute("sex", sex == 1 ? "男" : "女");
         model.addAttribute("age", age);
         return "assign";
+    }
+
+    @RequestMapping("/list")
+    public String list(Model model){
+        List<String> names = Arrays.asList(new String[]{"张三", "李四", "王五"});
+
+        model.addAttribute("names", names);
+
+        return "list";
     }
 }
