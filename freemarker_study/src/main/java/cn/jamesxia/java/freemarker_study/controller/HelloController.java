@@ -50,4 +50,28 @@ public class HelloController {
 
         return "list";
     }
+
+    @RequestMapping("/compress")
+    public String compress(Model model){
+        return "compress";
+    }
+
+    @RequestMapping("/function")
+    public String function(Model model){
+        model.addAttribute("x", 100);
+        model.addAttribute("y",1222);
+        return "function";
+    }
+
+    @RequestMapping("/local")
+    public String local(Model model){
+        return "local";
+    }
+
+    @RequestMapping("/macro")
+    public String macro(Model model){
+        model.addAttribute("names", Arrays.asList(new String[]{"zhangsan", "lisi", "wanwu"}));
+
+        return "macro";
+    }
 }
